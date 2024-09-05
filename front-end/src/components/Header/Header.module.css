@@ -1,0 +1,15 @@
+/* Header.module.css */
+.header {
+  background-color: #f4f4f4;
+  padding: 20px;
+  text-align: center;
+}
+
+.title {
+  font-size: 30px;
+  color: #333;
+}
+
+.subtitle {
+  color: #666;
+}
