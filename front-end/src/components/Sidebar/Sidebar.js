@@ -1,8 +1,9 @@
+// src/components/Sidebar.js
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom"; // useLocation ekledik
 import { FaBars, FaTimes } from "react-icons/fa";
 
-const Sidebar = () => {
+const Sidebar = ({ menuItems }) => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation(); // Mevcut sayfanın yolunu almak için
 
@@ -37,69 +38,17 @@ const Sidebar = () => {
 
         {/* Menü öğeleri */}
         <ul className="space-y-6">
-          <li>
-            <Link
-              to="/mars-atmosphere-and-climate"
-              className={getLinkClass("/mars-atmosphere-and-climate")}
-              onClick={toggleMenu}
-            >
-              Mars Atmosferi ve İklimi
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/mars-surface-and-topography"
-              className={getLinkClass("/mars-surface-and-topography")}
-              onClick={toggleMenu}
-            >
-              Mars Yüzeyi ve Topografyası
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/mars-water-resources"
-              className={getLinkClass("/mars-water-resources")}
-              onClick={toggleMenu}
-            >
-              Mars Su Kaynakları
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/mars-habitability"
-              className={getLinkClass("/mars-habitability")}
-              onClick={toggleMenu}
-            >
-              Mars Yaşanabilirliği
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/mars-missions"
-              className={getLinkClass("/mars-missions")}
-              onClick={toggleMenu}
-            >
-              Mars Görevleri
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/mars-geological-timeline"
-              className={getLinkClass("/mars-geological-timeline")}
-              onClick={toggleMenu}
-            >
-              Mars Jeolojik Zaman Çizelgesi
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/mars-moons"
-              className={getLinkClass("/mars-moons")}
-              onClick={toggleMenu}
-            >
-              Mars'ın Uyduları
-            </Link>
-          </li>
+          {menuItems.map((item) => (
+            <li key={item.path}>
+              <Link
+                to={item.path}
+                className={getLinkClass(item.path)}
+                onClick={toggleMenu}
+              >
+                {item.label}
+              </Link>
+            </li>
+          ))}
         </ul>
       </div>
 
