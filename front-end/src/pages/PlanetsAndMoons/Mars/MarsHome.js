@@ -15,9 +15,12 @@ function MarsHome() {
 
   return (
     <div>
-      <Sidebar menuItems={marsMenuItems} />
-      <h1>Mars Home Page</h1>
-      {/* İçerik buraya gelecek */}
+      {/* title prop'u ile Mars başlığı geçildi */}
+      <Sidebar menuItems={marsMenuItems} title="Mars" />
+      <div className="ml-64 p-8"> {/* Sidebar genişliği için sol marjin eklendi */}
+        {/* <h1 className="text-3xl font-bold">Mars Home Page</h1> */}
+        {/* Mars ile ilgili içerik buraya gelecek */}
+      </div>
     </div>
   );
 }

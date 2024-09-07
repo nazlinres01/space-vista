@@ -1,3 +1,4 @@
+// src/pages/PlanetsAndMoons/Earth/EarthHome.js
 import React from 'react';
 import Sidebar from '../../../components/Sidebar/Sidebar';
 
@@ -14,7 +15,12 @@ function EarthHome() {
 
   return (
     <div>
-      <Sidebar menuItems={menuItems} />
+      {/* title prop'u ile Dünya başlığı geçildi */}
+      <Sidebar menuItems={menuItems} title="Dünya" />
+      <div className="ml-64 p-8"> {/* Sidebar genişliğiyle uyum için sol marjin eklendi */}
+        {/* <h1 className="text-3xl font-bold">Dünya Home Page</h1> */}
+        {/* Dünya ile ilgili içerik buraya gelecek */}
+      </div>
     </div>
   );
 }
