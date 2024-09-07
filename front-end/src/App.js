@@ -15,6 +15,7 @@ import MarsHabitability from './pages/PlanetsAndMoons/Mars/MarsHabitability';
 import MarsMissions from './pages/PlanetsAndMoons/Mars/MarsMissions';
 import MarsGeologicalTimeline from './pages/PlanetsAndMoons/Mars/MarsGeologicalTimeline';
 import MarsMoons from './pages/PlanetsAndMoons/Mars/MarsMoons';
+import MarsHome from './pages/PlanetsAndMoons/Mars/MarsHome';
 
 import EarthAtmosphereAndClimate from './pages/PlanetsAndMoons/Earth/EarthAtmosphereAndClimate';
 import EarthSurfaceAndTopography from './pages/PlanetsAndMoons/Earth/EarthSurfaceAndTopography';
@@ -37,6 +38,7 @@ function App() {
         <Route path="/uzay-olaylari-ve-doga-olaylari" element={<SpaceEventsAndNaturalPhenomena />} /> */}
 
         {/* Planets and Moons Routes */}
+        <Route path="gezegenler-ve-uydular/mars" element={<MarsHome />} />
         <Route path="/gezegenler-ve-uydular/mars/mars-atmosferi-ve-iklimi" element={<MarsAtmosphereAndClimate />} />
         <Route path="/gezegenler-ve-uydular/mars/mars-yuzeyi-ve-topografyasi" element={<MarsSurfaceAndTopography />} />
         <Route path="/gezegenler-ve-uydular/mars/mars-su-kaynaklari" element={<MarsWaterResources />} />
