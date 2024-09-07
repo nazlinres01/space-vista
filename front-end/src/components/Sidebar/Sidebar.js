@@ -1,31 +1,34 @@
 // src/components/Sidebar.js
 import React, { useState } from "react";
-import { Link, useLocation } from "react-router-dom"; // useLocation ekledik
+import { Link, useLocation } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 
-const Sidebar = ({ menuItems }) => {
+const Sidebar = ({ menuItems, title }) => {  // title prop eklendi
   const [isOpen, setIsOpen] = useState(false);
-  const location = useLocation(); // Mevcut sayfanın yolunu almak için
+  const location = useLocation();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
-  // Seçili öğeye özel stil vermek için bir yardımcı fonksiyon
   const getLinkClass = (path) => {
     return location.pathname === path
-      ? "text-yellow-500 font-semibold" // Seçili olan stil
-      : "text-gray-300 hover:text-yellow-500 transition-colors duration-300"; // Hover stili
+      ? "text-yellow-500 font-semibold"
+      : "text-gray-300 hover:text-yellow-500 transition-colors duration-300";
   };
 
   return (
     <div>
-      {/* Menü ikonu (açma kapama) */}
-      <button onClick={toggleMenu} className="text-white text-2xl p-4 bg-gray-900 fixed top-0 left-0 z-50">
-        <FaBars />
-      </button>
+      {/* Üst menü barı */}
+      <div className="fixed top-0 left-0 w-full h-16 bg-gray-900 flex items-center z-50">
+        <button onClick={toggleMenu} className="text-white text-2xl p-4 ml-4">
+          <FaBars />
+        </button>
+        {/* Dinamik başlık */}
+        <h1 className="text-white text-xl ml-4">{title}</h1>
+      </div>
 
-      {/* Menü alanı */}
+      {/* Sidebar alanı */}
       <div
         className={`fixed top-0 left-0 h-full w-64 bg-gray-800 text-white p-8 transform transition-transform duration-300 ${
           isOpen ? "translate-x-0" : "-translate-x-full"
