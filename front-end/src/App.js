@@ -25,6 +25,7 @@ import EarthMissions from './pages/PlanetsAndMoons/Earth/EarthMissions';
 import EarthGeologicalTimeline from './pages/PlanetsAndMoons/Earth/EarthGeologicalTimeline';
 import EarthMoons from './pages/PlanetsAndMoons/Earth/EarthMoons';
 import Footer from './components/Footer/Footer';
+import EarthHome from './pages/PlanetsAndMoons/Earth/EarthHome';
 
 function App() {
   return (
@@ -47,6 +48,8 @@ function App() {
         <Route path="/gezegenler-ve-uydular/mars/mars-jeolojik-zaman-cizelgesi" element={<MarsGeologicalTimeline />} />
         <Route path="/gezegenler-ve-uydular/mars/mars-uydulari" element={<MarsMoons />} />
 
+
+        <Route path="gezegenler-ve-uydular/dunya" element={<EarthHome />} />
         <Route path="/gezegenler-ve-uydular/dunya/dunya-atmosferi-ve-iklimi" element={<EarthAtmosphereAndClimate />} />
         <Route path="/gezegenler-ve-uydular/dunya/dunya-yuzeyi-ve-topografyasi" element={<EarthSurfaceAndTopography />} />
         <Route path="/gezegenler-ve-uydular/dunya/dunya-su-kaynaklari" element={<EarthWaterResources />} />
