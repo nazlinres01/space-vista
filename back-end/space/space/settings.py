@@ -121,3 +121,5 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+NASA_API_KEY = 'gnYVD5JdV6ypXGNY7fqKVhEtlct0ms49tyhEmmsL'
