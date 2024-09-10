@@ -44,7 +44,7 @@ const Footer = () => (
         target="_blank"
         rel="noopener noreferrer"
       >
-        <i className="fab fa-instagram">instag</i>
+        <i className="fab fa-instagram"></i>
       </a>
     </div>
   </footer>
