@@ -1,7 +1,8 @@
 import React from "react";
 import Header from "../../../components/Header/Header"; // Header componentini içe aktar
 import Footer from "../../../components/Footer/Footer";
-//import styles from './MarsAtmosphereAndClimate.module.css'; // Bu sayfaya özel CSS dosyası
+import WeatherChart from "../../../components/WeatherChart"; // WeatherChart bileşenini içe aktar
+// import styles from './MarsAtmosphereAndClimate.module.css'; // Bu sayfaya özel CSS dosyası
 
 const MarsAtmosphereAndClimate = () => (
   <div>
@@ -9,7 +10,7 @@ const MarsAtmosphereAndClimate = () => (
       title="Mars Atmosferi ve İklimi"
       subtitle="Mars'ın atmosferi ve iklimini ayrıntılı veriler ve görselleştirmelerle keşfedin."
     />
-    {/* Sayfanın geri kalan içeriği */}
+    <WeatherChart /> {/* WeatherChart bileşenini ekle */}
     <Footer /> {/* Footer componentini ekle */}
   </div>
 );
