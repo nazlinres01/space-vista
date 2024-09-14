@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../../../components/Header/Header"; // Header componentini içe aktar
 import Footer from "../../../components/Footer/Footer";
-import WeatherChart from "../../../components/WeatherChart"; // WeatherChart bileşenini içe aktar
+import WeatherChart from "../../../components/WeatherChart/WeatherChart";
 // import styles from './MarsAtmosphereAndClimate.module.css'; // Bu sayfaya özel CSS dosyası
 
 const MarsAtmosphereAndClimate = () => (
