@@ -123,3 +123,17 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 NASA_API_KEY = 'gnYVD5JdV6ypXGNY7fqKVhEtlct0ms49tyhEmmsL'
+
+INSTALLED_APPS = [
+    # Diğer uygulamalar
+    'corsheaders',
+]
+
+MIDDLEWARE = [
+    # Diğer middleware'ler
+    'corsheaders.middleware.CorsMiddleware',
+]
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",  # React uygulamanızın çalıştığı adres
+]
