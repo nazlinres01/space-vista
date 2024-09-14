@@ -1,8 +1,7 @@
-// src/components/WeatherChart.js
-
 import React, { useEffect, useState } from 'react';
 import { Line } from 'react-chartjs-2';
 import { Chart as ChartJS, CategoryScale, LinearScale, Title, Tooltip, Legend } from 'chart.js';
+import { getMarsWeather } from '../api/api';  // API dosyasından fonksiyonu içe aktarın
 
 ChartJS.register(CategoryScale, LinearScale, Title, Tooltip, Legend);
 
@@ -11,12 +10,16 @@ const WeatherChart = () => {
 
     useEffect(() => {
         // API'den veri çekme
-        fetch('/api/insight-weather/')
-            .then(response => response.json())
-            .then(data => {
-                setData(data);
-            })
-            .catch(error => console.error('Error fetching weather data:', error));
+        const fetchData = async () => {
+            try {
+                const weatherData = await getMarsWeather();
+                setData(weatherData);
+            } catch (error) {
+                console.error('Error fetching weather data:', error);
+            }
+        };
+
+        fetchData();
     }, []);
 
     // Grafik için veri işleme
