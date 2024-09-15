@@ -1,11 +1,11 @@
 // src/pages/PlanetsAndMoons/PlanetsAndMoonsHome.js
 import React from 'react';
-import Sidebar from '../../components/Sidebar/Sidebar';
+import Sidebar from '../../../components/Sidebar/Sidebar';
 
 
 const menuItems = [
-  { path: "/gezegenler-ve-uydular/dunya", label: "Dünya" },
-  { path: "/gezegenler-ve-uydular/mars", label: "Mars" }
+  { path: "/konular/gezegenler-ve-uydular/dunya", label: "Dünya" },
+  { path: "/konular/gezegenler-ve-uydular/mars", label: "Mars" }
 ];
 
 export default function PlanetsAndMoonsHome() {
