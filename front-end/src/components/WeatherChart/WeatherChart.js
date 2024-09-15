@@ -192,9 +192,7 @@ const WeatherChart = () => {
                         },
                     }} />
                 </div>
-            ) : (
-                <p className="text-gray-600">Veriler yükleniyor...</p>
-            )}
+            ) : null}
         </div>
     );
 };
