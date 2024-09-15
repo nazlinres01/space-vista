@@ -22,4 +22,6 @@ export const getMarsWeather = async () => {
   }
 };
 
+
+
 // Diğer API isteklerini buraya ekleyin
