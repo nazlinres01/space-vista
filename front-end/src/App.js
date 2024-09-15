@@ -22,12 +22,18 @@ import EarthMoons from "./pages/PlanetsAndMoons/Earth/EarthMoons";
 import Footer from "./components/Footer/Footer";
 import EarthHome from "./pages/PlanetsAndMoons/Earth/EarthHome";
 import Layout from "./components/Layout/Layout"; // Layout bileşenini içe aktar
+import { Home } from "./pages/Home/Home";
 
 function App() {
   return (
     <Router>
       <Routes>
         <Route element={<Layout />}>
+
+        <Route
+            path="Home/"
+            element={<Home />}
+          />
           <Route
             path="gezegenler-ve-uydular/"
             element={<PlanetsAndMoonsHome />}
