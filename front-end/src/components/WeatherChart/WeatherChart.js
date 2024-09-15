@@ -186,7 +186,7 @@ const WeatherChart = () => {
                                     color: '#ddd',
                                 },
                                 ticks: {
-                                    stepSize: 1,
+                                    stepSize: 3,
                                 }
                             }
                         },
