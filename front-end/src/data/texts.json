@@ -1,0 +1,76 @@
+{
+    "hero": {
+      "title": "Uzayı Keşfedin",
+      "description": "Etkileşimli uzay verileri, güçlü görselleştirme araçları ve uzay keşifleriyle dolu bu platformda yerinizi alın.",
+      "cta": "Keşfetmeye Başla"
+    },
+    "features": [
+      {
+        "title": "Geniş Veri Havuzu",
+        "description": "Uluslararası uzay ajanslarından ve araştırma merkezlerinden toplanan devasa veri kaynaklarını keşfedin.",
+        "icon": "data",
+        "link": "#data-scope"
+      },
+      {
+        "title": "Etkileşimli Görselleştirme",
+        "description": "Uzay verilerini kullanıcı dostu ve etkileşimli görsellerle keşfedin, analiz edin ve öğrenin.",
+        "icon": "visualization",
+        "link": "#visualization"
+      },
+      {
+        "title": "Eğitim Araçları",
+        "description": "Uzay bilimlerine yönelik profesyonel araçlara ve eğitim içeriklerine erişin.",
+        "icon": "tools",
+        "link": "#education-tools"
+      },
+      {
+        "title": "Yapay Zeka",
+        "description": "Uzay verilerini yapay zeka ile analiz edin ve yeni keşifler yapın.",
+        "icon": "ai",
+        "link": "#ai-tools"
+      }
+    ],
+    "dataScope": [
+      {
+        "title": "Güneş ve Güneş Aktivitesi",
+        "description": "Güneş lekeleri, koronal kütle atımları ve güneş rüzgarları hakkında veriler.",
+        "link": "/konular/gunes-ve-gunes-aktivitesi"
+      },
+      {
+        "title": "Gezegenler ve Uydular",
+        "description": "Gezegenlerin yüzey özellikleri, atmosfer yapıları ve hareketleri hakkında detaylı bilgi.",
+        "link": "/konular/gezegenler-ve-uydular"
+      },
+      {
+        "title": "Yıldızlar ve Galaksiler",
+        "description": "Yıldızların evrimi ve galaksilerin dinamikleri üzerine veri ve görselleştirme araçlarını keşfedin.",
+        "link": "/konular/yildizlar-ve-galaksiler"
+      },
+      {
+        "title": "Uzaydaki Yaşam",
+        "description": "Uzayda yaşam koşulları ve Mars ile ötegezegenlerdeki yaşam arayışları üzerine araştırmalar.",
+        "link": "/konular/uzaydaki-yasam"
+      },
+      {
+        "title": "Uzay Yolculuğu ve Gelecek Misyonlar",
+        "description": "İnsanlı ve insansız uzay misyonları, roketler ve uzay teknolojileri hakkında veriler.",
+        "link": "/konular/uzay-yolculugu-ve-gelecek-misyonlar"
+      },
+      {
+        "title": "Uzay Olayları ve Doğa Olayları",
+        "description": "Süpernovalar, kara delikler ve galaksi birleşmeleri gibi kozmik fenomenler hakkında bilgi.",
+        "link": "/konular/uzay-olaylari-ve-doga-olaylari"
+      }
+    ],
+    "educationTools": {
+      "title": "Eğitim ve Bilimsel Araçlar",
+      "description": "Hem bilim insanları hem de meraklılar için uzay bilimine yönelik eğitim materyalleri ve gelişmiş araçlar.",
+      "cta": "Daha Fazla Bilgi Edinin"
+    },
+    "callToAction": {
+      "title": "Uzay Verisini Keşfetmeye Hazır Mısınız?",
+      "description": "Uzayın derinliklerine dair bilgi edinmek, bilimsel araştırmalarınıza güç katmak ya da uzay merakınızı gidermek için hemen platformumuza katılın.",
+      "cta": "Şimdi Katıl"
+    }
+  }
+  

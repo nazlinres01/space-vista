@@ -1,8 +1,20 @@
 // src/pages/GeneralHome.js
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../../components/Navbar/Navbar";
+import FeatureCard from "../../components/FeatureCard/FeatureCard";
+import DataScopeCard from "../../components/DataScopeCard/DataScopeCard";
+import texts from '../../data/texts.json';  // JSON dosyasını import ediyoruz
 
 const GeneralHome = () => {
+  const [content, setContent] = useState({});
+
+  useEffect(() => {
+    // JSON dosyasından metinleri al
+    setContent(texts);
+  }, []);
+
+  if (!content.hero) return <div>Loading...</div>;
+
   return (
     <div className="bg-gray-100 min-h-screen">
       {/* Navbar */}
@@ -16,17 +28,16 @@ const GeneralHome = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-black to-transparent opacity-90"></div>
         <div className="relative z-10 text-center text-white flex flex-col justify-center items-center h-full">
           <h1 className="text-7xl font-extrabold mb-6 drop-shadow-lg">
-            Uzayı Keşfedin
+            {content.hero.title}
           </h1>
           <p className="text-2xl mb-8 max-w-3xl leading-relaxed">
-            Etkileşimli uzay verileri, güçlü görselleştirme araçları ve uzay
-            keşifleriyle dolu bu platformda yerinizi alın.
+            {content.hero.description}
           </p>
           <a
             href="#features"
             className="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-semibold py-4 px-8 rounded-lg shadow-lg transition-transform transform hover:scale-105"
           >
-            Keşfetmeye Başla
+            {content.hero.cta}
           </a>
         </div>
       </div>
@@ -38,25 +49,15 @@ const GeneralHome = () => {
             Öne Çıkan Özellikler
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16">
-            {/* Özellik Kartları */}
-            <FeatureCard
-              title="Geniş Veri Havuzu"
-              description="Uluslararası uzay ajanslarından ve araştırma merkezlerinden toplanan devasa veri kaynaklarını keşfedin."
-              icon="data"
-              link="#data-scope"
-            />
-            <FeatureCard
-              title="Etkileşimli Görselleştirme"
-              description="Uzay verilerini kullanıcı dostu ve etkileşimli görsellerle keşfedin, analiz edin ve öğrenin."
-              icon="visualization"
-              link="#visualization"
-            />
-            <FeatureCard
-              title="Eğitim Araçları"
-              description="Uzay bilimlerine yönelik profesyonel araçlara ve eğitim içeriklerine erişin."
-              icon="tools"
-              link="#education-tools"
-            />
+            {content.features.map((feature, index) => (
+              <FeatureCard
+                key={index}
+                title={feature.title}
+                description={feature.description}
+                icon={feature.icon}
+                link={feature.link}
+              />
+            ))}
           </div>
         </div>
       </div>
@@ -68,37 +69,14 @@ const GeneralHome = () => {
             Uzay Verisi ve Kapsamı
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16">
-            {/* Veri Kapsam Kartları */}
-            <DataScopeCard
-              title="Güneş ve Güneş Sistemi"
-              description="Güneş lekeleri, koronal kütle atımları ve güneş rüzgarları hakkında veriler."
-              link="/konular/gunes-ve-gunes-aktivitesi"
-            />
-            <DataScopeCard
-              title="Gezegen Bilimi"
-              description="Gezegenlerin yüzey özellikleri, atmosfer yapıları ve hareketleri hakkında detaylı bilgi."
-              link="/konular/gezegenler-ve-uydular"
-            />
-            <DataScopeCard
-              title="Yıldızlar ve Galaksiler"
-              description="Yıldızların evrimi ve galaksilerin dinamikleri üzerine veri ve görselleştirme araçlarını keşfedin."
-              link="/konular/yildizlar-ve-galaksiler"
-            />
-            <DataScopeCard
-              title="Uzaydaki Yaşam"
-              description="Uzayda yaşam koşulları ve Mars ile ötegezegenlerdeki yaşam arayışları üzerine araştırmalar."
-              link="/konular/uzaydaki-yasam"
-            />
-            <DataScopeCard
-              title="Uzay Yolculuğu ve Keşif"
-              description="İnsanlı ve insansız uzay misyonları, roketler ve uzay teknolojileri hakkında veriler."
-              link="/konular/uzay-yolculugu-ve-gelecek-misyonlar"
-            />
-            <DataScopeCard
-              title="Kozmik Olaylar"
-              description="Süpernovalar, kara delikler ve galaksi birleşmeleri gibi kozmik fenomenler hakkında bilgi."
-              link="/konular/uzay-olaylari-ve-doga-olaylari"
-            />
+            {content.dataScope.map((scope, index) => (
+              <DataScopeCard
+                key={index}
+                title={scope.title}
+                description={scope.description}
+                link={scope.link}
+              />
+            ))}
           </div>
         </div>
       </div>
@@ -106,15 +84,15 @@ const GeneralHome = () => {
       {/* Eğitim ve Bilimsel Araçlar */}
       <div id="education-tools" className="bg-gray-900 text-white py-24">
         <div className="max-w-7xl mx-auto text-center px-4">
-          <h2 className="text-5xl font-bold mb-12">Eğitim ve Bilimsel Araçlar</h2>
+          <h2 className="text-5xl font-bold mb-12">{content.educationTools.title}</h2>
           <p className="text-xl mb-16 max-w-4xl mx-auto">
-            Hem bilim insanları hem de meraklılar için uzay bilimine yönelik eğitim materyalleri ve gelişmiş araçlar.
+            {content.educationTools.description}
           </p>
           <a
             href="/egitim-araclari"
             className="bg-yellow-500 hover:bg-yellow-600 py-4 px-10 rounded-lg font-semibold text-gray-900 shadow-lg transition-transform transform hover:scale-105"
           >
-            Daha Fazla Bilgi Edinin
+            {content.educationTools.cta}
           </a>
         </div>
       </div>
@@ -123,60 +101,21 @@ const GeneralHome = () => {
       <div className="py-24 bg-white text-center mb-40 ">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-4xl font-bold text-gray-800 mb-4">
-            Uzay Verisini Keşfetmeye Hazır Mısınız?
+            {content.callToAction.title}
           </h2>
           <p className="text-lg text-gray-600 mb-8">
-            Uzayın derinliklerine dair bilgi edinmek, bilimsel araştırmalarınıza güç katmak ya da uzay merakınızı gidermek için hemen platformumuza katılın.
+            {content.callToAction.description}
           </p>
           <a
             href="/kayit-ol"
             className="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-semibold py-4 px-8 rounded-lg shadow-lg transition-transform transform hover:scale-105"
           >
-            Şimdi Katıl
+            {content.callToAction.cta}
           </a>
         </div>
       </div>
     </div>
   );
 };
-
-// Özellik Kartı Bileşeni
-const FeatureCard = ({ title, description, icon, link }) => (
-  <div
-    className="bg-gray-900 text-white p-10 rounded-lg shadow-lg transform hover:scale-105 transition-transform"
-  >
-    <div className="mb-6">
-      <img
-        src={`/icons/${icon}.svg`}
-        alt={`${title} Icon`}
-        className="w-16 h-16 mx-auto"
-      />
-    </div>
-    <h3 className="text-2xl font-bold mb-4">{title}</h3>
-    <p>{description}</p>
-    <a
-      href={link}
-      className="mt-4 inline-block text-yellow-500 hover:text-yellow-600"
-    >
-      Daha fazla bilgi
-    </a>
-  </div>
-);
-
-// Veri Kapsam Kartı Bileşeni
-const DataScopeCard = ({ title, description, link }) => (
-  <div
-    className="bg-white p-10 rounded-lg shadow-lg transform hover:scale-105 transition-transform"
-  >
-    <h3 className="text-3xl font-bold mb-4">{title}</h3>
-    <p>{description}</p>
-    <a
-      href={link}
-      className="mt-4 inline-block text-yellow-500 hover:text-yellow-600"
-    >
-      Detayları inceleyin
-    </a>
-  </div>
-);
 
 export default GeneralHome;
