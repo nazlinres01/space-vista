@@ -7,11 +7,11 @@ const About = () => {
         {/* Hero Section */}
         <div className="relative">
           <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: 'url("https://via.placeholder.com/1500")' }}>
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-800 to-blue-600 opacity-50"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-800 to-blue-600 opacity-60"></div>
           </div>
           <div className="relative z-10 text-center text-white py-16">
             <h1 className="text-4xl font-bold mb-4">Hakkımızda</h1>
-            <p className="text-lg">Biz, teknoloji ve inovasyonu birleştiren lider bir firma olarak, geleceği şekillendirmeye devam ediyoruz.</p>
+            <p className="text-lg mb-8">Uzay verilerini analiz etmek ve görselleştirmek için geliştirdiğimiz entegre platform ile bilimin sınırlarını zorlayın.</p>
           </div>
         </div>
 
@@ -21,10 +21,10 @@ const About = () => {
           <div className="grid md:grid-cols-2 gap-8">
             <div>
               <p className="text-lg text-gray-700 mb-4">
-                Şirketimiz, 2005 yılında teknoloji ve inovasyon odaklı bir vizyonla kuruldu. İlk başlarda küçük bir ekip ile başladık ve hızla büyüyerek sektördeki en önemli oyunculardan biri haline geldik.
+                2022 yılında uzay verilerini daha erişilebilir hale getirmek için yola çıktık. Küçük bir ekip olarak başladık ve hızla global bir platform haline geldik.
               </p>
               <p className="text-lg text-gray-700">
-                2010 yılında, ilk büyük projelerimizi tamamladık ve müşterilerimize mükemmel hizmet sunmaya başladık. Bugün, dünya çapında birçok müşterimiz ve güçlü bir ekip ile çalışmalarımıza devam ediyoruz.
+                Şu anda, dünya çapında çeşitli araştırma merkezleriyle işbirliği yaparak kullanıcılarımıza en güncel ve kapsamlı verileri sunuyoruz.
               </p>
             </div>
             <div className="flex items-center justify-center">
@@ -44,13 +44,13 @@ const About = () => {
               <div>
                 <h2 className="text-3xl font-semibold text-gray-900 mb-6">Misyonumuz</h2>
                 <p className="text-lg text-gray-700 mb-4">
-                  Müşterilerimize en yüksek kalitede ürün ve hizmetleri sunarak onların hayatlarını daha kolay ve verimli hale getirmeyi hedefliyoruz. İnovasyonu ve müşteri memnuniyetini ön planda tutarak sürekli olarak gelişiyoruz.
+                  Misyonumuz, uzay verilerini herkes için anlaşılır ve erişilebilir hale getirerek bilimsel araştırmaları desteklemektir. Eğitim ve araştırma alanında yenilikçi çözümler sunuyoruz.
                 </p>
               </div>
               <div>
                 <h2 className="text-3xl font-semibold text-gray-900 mb-6">Vizyonumuz</h2>
                 <p className="text-lg text-gray-700">
-                  Geleceği şekillendiren ve teknolojiye yön veren bir lider olmayı hedefliyoruz. Sürdürülebilirlik, inovasyon ve mükemmellik prensipleri doğrultusunda dünya çapında etkili projeler gerçekleştiriyoruz.
+                  Vizyonumuz, uzay bilimleri alanında küresel bir lider olmak ve ileri teknolojiler kullanarak bilimsel verilerin anlaşılmasını ve kullanılmasını kolaylaştırmaktır.
                 </p>
               </div>
             </div>
@@ -61,7 +61,7 @@ const About = () => {
         <div className="p-8">
           <h2 className="text-3xl font-semibold text-gray-900 mb-6">Ekibimiz</h2>
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-md text-center">
+            <div className="bg-white p-6 rounded-lg shadow-md text-center transition-transform transform hover:scale-105 duration-300">
               <img
                 src="https://via.placeholder.com/150"
                 alt="Team Member"
@@ -70,7 +70,7 @@ const About = () => {
               <h3 className="text-xl font-semibold text-gray-900 mb-2">John Doe</h3>
               <p className="text-gray-700">CEO</p>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-md text-center">
+            <div className="bg-white p-6 rounded-lg shadow-md text-center transition-transform transform hover:scale-105 duration-300">
               <img
                 src="https://via.placeholder.com/150"
                 alt="Team Member"
@@ -79,7 +79,7 @@ const About = () => {
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Jane Smith</h3>
               <p className="text-gray-700">CTO</p>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-md text-center">
+            <div className="bg-white p-6 rounded-lg shadow-md text-center transition-transform transform hover:scale-105 duration-300">
               <img
                 src="https://via.placeholder.com/150"
                 alt="Team Member"
