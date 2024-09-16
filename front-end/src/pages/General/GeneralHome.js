@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import Navbar from "../../components/Navbar/Navbar";
 import FeatureCard from "../../components/FeatureCard/FeatureCard";
 import DataScopeCard from "../../components/DataScopeCard/DataScopeCard";
-import texts from '../../data/texts.json';  // JSON dosyasını import ediyoruz
+import texts from "../../data/texts.json"; // JSON dosyasını import ediyoruz
 
 const GeneralHome = () => {
   const [content, setContent] = useState({});
@@ -21,10 +21,18 @@ const GeneralHome = () => {
       <Navbar />
 
       {/* Hero Bölümü */}
-      <div
-        className="relative bg-cover bg-center h-screen parallax"
-        style={{ backgroundImage: "url('/path-to-space-image.jpg')" }}
-      >
+      <div className="relative h-screen overflow-hidden">
+        {/* Video arka plan */}
+        <video
+          className="absolute top-0 left-0 w-full h-full object-cover"
+          autoPlay
+          muted
+          loop
+        >
+          <source src="/videos/854233-hd_1280_720_29fps.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        {/* Karartma ve içerik */}
         <div className="absolute inset-0 bg-gradient-to-b from-black to-transparent opacity-90"></div>
         <div className="relative z-10 text-center text-white flex flex-col justify-center items-center h-full">
           <h1 className="text-7xl font-extrabold mb-6 drop-shadow-lg">
@@ -84,7 +92,9 @@ const GeneralHome = () => {
       {/* Eğitim ve Bilimsel Araçlar */}
       <div id="education-tools" className="bg-gray-900 text-white py-24">
         <div className="max-w-7xl mx-auto text-center px-4">
-          <h2 className="text-5xl font-bold mb-12">{content.educationTools.title}</h2>
+          <h2 className="text-5xl font-bold mb-12">
+            {content.educationTools.title}
+          </h2>
           <p className="text-xl mb-16 max-w-4xl mx-auto">
             {content.educationTools.description}
           </p>
