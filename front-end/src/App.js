@@ -28,6 +28,7 @@ import Education from "./pages/Education/Education";
 import AI from "./pages/AI/AI";
 import { TopicsHome } from "./pages/Topics/TopicsHome/TopicsHome";
 import Footer from "./components/Footer/Footer";
+import Contact from "./pages/Contact/Contact";
 
 function App() {
   return (
@@ -42,6 +43,9 @@ function App() {
         <Route path="/konular" element={<TopicsHome/>} />
         <Route path="/giris" element={<Login />} />
         <Route path="/kayit-ol" element={<Register />} />
+        <Route path="/iletisim" element={<Contact />} />
+
+
   
           <Route
             path="/konular/gezegenler-ve-uydular/"
