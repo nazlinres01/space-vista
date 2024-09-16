@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import Navbar from "../../components/Navbar/Navbar";
 import FeatureCard from "../../components/FeatureCard/FeatureCard";
 import DataScopeCard from "../../components/DataScopeCard/DataScopeCard";
-import texts from "../../data/texts.json"; // JSON dosyasını import ediyoruz
+import texts from "../../data/texts.json"
 
 const GeneralHome = () => {
   const [content, setContent] = useState({});
