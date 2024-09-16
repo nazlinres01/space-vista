@@ -29,6 +29,7 @@ import AI from "./pages/AI/AI";
 import { TopicsHome } from "./pages/Topics/TopicsHome/TopicsHome";
 import Footer from "./components/Footer/Footer";
 import Contact from "./pages/Contact/Contact";
+import About from "./pages/About/About";
 
 function App() {
   return (
@@ -44,6 +45,8 @@ function App() {
         <Route path="/giris" element={<Login />} />
         <Route path="/kayit-ol" element={<Register />} />
         <Route path="/iletisim" element={<Contact />} />
+        <Route path="/hakkinda" element={<About />} />
+
 
 
   
