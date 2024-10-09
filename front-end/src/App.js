@@ -26,7 +26,7 @@ import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
 import Education from "./pages/Education/Education";
 import AI from "./pages/AI/AI";
-import { TopicsHome } from "./pages/Topics/TopicsHome/TopicsHome";
+import TopicsHome from "./pages/Topics/TopicsHome/TopicsHome";
 import Footer from "./components/Footer/Footer";
 import Contact from "./pages/Contact/Contact";
 import About from "./pages/About/About";
@@ -36,27 +36,25 @@ function App() {
     <Router>
       <Routes>
         <Route element={<Layout />}>
+          <Route path="/" element={<GeneralHome />} />
+          <Route path="/egitimler" element={<Education />} />
+          <Route path="/yapay-zeka" element={<AI />} />
+          <Route path="/konular" element={<TopicsHome />} />
+          <Route path="/giris" element={<Login />} />
+          <Route path="/kayit-ol" element={<Register />} />
+          <Route path="/iletisim" element={<Contact />} />
+          <Route path="/hakkinda" element={<About />} />
 
-
-        <Route path="/" element={<GeneralHome />} />
-        <Route path="/egitimler" element={<Education />} />
-        <Route path="/yapay-zeka" element={<AI />} />
-        <Route path="/konular" element={<TopicsHome/>} />
-        <Route path="/giris" element={<Login />} />
-        <Route path="/kayit-ol" element={<Register />} />
-        <Route path="/iletisim" element={<Contact />} />
-        <Route path="/hakkinda" element={<About />} />
-
-
-
-  
           <Route
             path="/konular/gezegenler-ve-uydular/"
             element={<PlanetsAndMoonsHome />}
           />
 
           {/* Planets and Moons Routes */}
-          <Route path="/konular/gezegenler-ve-uydular/mars" element={<MarsHome />} />
+          <Route
+            path="/konular/gezegenler-ve-uydular/mars"
+            element={<MarsHome />}
+          />
           <Route
             path="/konular/gezegenler-ve-uydular/mars/mars-atmosferi-ve-iklimi"
             element={<MarsAtmosphereAndClimate />}
@@ -86,7 +84,10 @@ function App() {
             element={<MarsMoons />}
           />
 
-          <Route path="/konular/gezegenler-ve-uydular/dunya" element={<EarthHome />} />
+          <Route
+            path="/konular/gezegenler-ve-uydular/dunya"
+            element={<EarthHome />}
+          />
           <Route
             path="/konular/gezegenler-ve-uydular/dunya/dunya-atmosferi-ve-iklimi"
             element={<EarthAtmosphereAndClimate />}

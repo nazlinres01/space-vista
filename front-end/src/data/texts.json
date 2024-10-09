@@ -68,5 +68,69 @@
     "title": "Uzay Verisini Keşfetmeye Hazır Mısınız?",
     "description": "Uzayın derinliklerine dair bilgi edinmek, bilimsel araştırmalarınıza güç katmak ya da uzay merakınızı gidermek için hemen platformumuza katılın.",
     "cta": "Şimdi Katıl"
-  }
+  },
+
+  "menuItems": [
+    {
+      "path": "/konular/gezegenler-ve-uydular",
+      "label": "Gezegenler ve Uydular"
+    },
+    {
+      "path": "/konular/yildizlar-ve-galaksiler",
+      "label": "Yıldızlar ve Galaksiler"
+    },
+    {
+      "path": "/konular/gunes-ve-gunes-aktivitesi",
+      "label": "Güneş ve Güneş Aktivitesi"
+    },
+    { "path": "/konular/uzaydaki-yasam", "label": "Uzaydaki Yaşam" },
+    {
+      "path": "/konular/uzay-yolculugu-ve-gelecek-misyonlar",
+      "label": "Uzay Yolculuğu ve Gelecek Misyonlar"
+    },
+    {
+      "path": "/konular/uzay-olaylari-ve-doga-olaylari",
+      "label": "Uzay Olayları ve Doğa Olayları"
+    }
+  ],
+
+  "topics": [
+    {
+      "path": "/konular/gezegenler-ve-uydular",
+      "label": "Gezegenler ve Uydular",
+      "description": "Uzayda bulunan gezegenler ve onların uyduları, astronominin temel konularından biridir. Bu bölümde, Güneş Sistemi'ndeki gezegenlerin yapısı, atmosferi, yüzey özellikleri ve her bir gezegenin sahip olduğu uydular hakkında kapsamlı bilgiler bulunmaktadır. Ayrıca, keşiflerin tarihçesi ve uzayda keşfedilen yeni gezegenlerin özellikleri üzerine de bilgiler sunulmaktadır.",
+      "image": "/images/gezegenler.jpg"
+    },
+    {
+      "path": "/konular/yildizlar-ve-galaksiler",
+      "label": "Yıldızlar ve Galaksiler",
+      "description": "Yıldızlar, evrenin temel yapı taşlarıdır. Bu bölümde, yıldızların nasıl oluştuğu, yaşam döngüleri, farklı türleri ve galaksilerin yapısı hakkında bilgiler yer almaktadır. Ayrıca, Samanyolu Galaksisi'nin özellikleri ve diğer galaksilerin evrimi gibi konulara da derinlemesine bir bakış sağlanmaktadır.",
+      "image": "/images/yildizlar.jpg"
+    },
+    {
+      "path": "/konular/gunes-ve-gunes-aktivitesi",
+      "label": "Güneş ve Güneş Aktivitesi",
+      "description": "Güneş, gezegenimizin yaşam kaynağıdır ve aktiviteleri dünya üzerindeki iklimi etkilemektedir. Bu bölümde, Güneş'in yapısı, sıcaklığı, iç dinamikleri ve güneş lekeleri gibi aktiviteleri hakkında bilgiler verilmektedir. Ayrıca, Güneş'ten kaynaklanan güneş rüzgarları ve bunların gezegenler üzerindeki etkileri de incelenmektedir.",
+      "image": "/images/gunes.jpg"
+    },
+    {
+      "path": "/konular/uzaydaki-yasam",
+      "label": "Uzaydaki Yaşam",
+      "description": "Uzayda yaşamın varlığı, bilim insanları ve astrobiologlar için büyük bir merak konusudur. Bu bölümde, Dünya dışındaki yaşam olasılıkları, yaşanabilir gezegenler ve astrobiolojinin önemi hakkında bilgiler sunulmaktadır. Mars, Europa ve Titan gibi gezegenlerde yaşam arayışına dair teoriler ve buluşlar da ele alınmaktadır.",
+      "image": "/images/uzaydaki_yasam.jpg"
+    },
+    {
+      "path": "/konular/uzay-yolculugu-ve-gelecek-misyonlar",
+      "label": "Uzay Yolculuğu ve Gelecek Misyonlar",
+      "description": "Uzay yolculuğu, insanlığın evreni keşfetme çabasının bir parçasıdır. Bu bölümde, geçmişteki önemli uzay misyonları ile günümüzdeki insanlı ve insansız keşif projeleri ele alınmaktadır. Ayrıca, Mars'a insan gönderme planları, Ay'a geri dönüş projeleri ve diğer gezegenlere yapılacak gelecekteki misyonlar hakkında güncel bilgiler verilmektedir.",
+      "image": "/images/uzay_yolculugu.jpg"
+    },
+    {
+      "path": "/konular/uzay-olaylari-ve-doga-olaylari",
+      "label": "Uzay Olayları ve Doğa Olayları",
+      "description": "Uzayda meydana gelen olaylar, doğada karşılaşılan olaylarla bazı benzerlikler göstermektedir. Bu bölümde, meteor yağmurları, güneş tutulmaları ve diğer astronomik olaylar ile depremler ve volkanik patlamalar gibi doğal afetler arasındaki ilişkiler detaylı bir şekilde incelenmektedir. Uzay olaylarının Dünya üzerindeki etkileri ve gözlemleri de ele alınmaktadır.",
+      "image": "/images/uzay_ve_doga.jpg"
+    }
+  ],
+  "introText": "Uzay, insanlığın en çok merak ettiği ve üzerinde en çok araştırma yapılan alanlardan biridir. Astronomi, astrofizik ve kozmoloji gibi disiplinler aracılığıyla, evrenin oluşumu, yapısı ve dinamikleri hakkında derinlemesine bilgiler elde edilmektedir. Bu bölümde, gezegenler, yıldızlar, galaksiler ve uzaydaki yaşam gibi birçok konu hakkında kapsamlı bilgilere ulaşacaksınız. Gezegenlerin ve uydularının oluşum süreçleri, yıldızların yaşam döngüleri ve galaksilerin evrimi, evrensel fizik yasalarıyla açıklanmaktadır. Ayrıca, Güneş'in dinamik yapısı ve aktiviteleri, gezegenler üzerindeki etkileriyle birlikte incelenecek; bu durum, iklim değişiklikleri ve yaşam koşulları açısından büyük önem taşımaktadır. Uzay yolculuğu, teknolojinin ve bilimin sınırlarını zorlayarak, insanlığın uzayda kalıcı varlığı ve diğer gezegenlerde yaşam arayışını beraberinde getirmektedir. Tüm bu konular, uzayla ilgili temel bilgileri ve evrenin sırlarını keşfetme tutkusunu içerirken, insanlığın varoluşsal sorularına yanıt arayışında da önemli bir rol oynamaktadır."
 }

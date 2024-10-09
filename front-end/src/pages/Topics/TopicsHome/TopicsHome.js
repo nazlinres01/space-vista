@@ -1,28 +1,32 @@
 // src/pages/Home.js
-import React from "react";
-import Sidebar from "../../../components/Sidebar/Sidebar";
+import React, { useEffect, useState } from "react";
+import Sidebar from "../../../components/Sidebar/Sidebar"; // Sidebar bileşeni
+import TopicsList from "../../../components/Topic/TopicsList"; // Yeni TopicsList bileşeni
+import textData from "../../../data/texts.json"; // JSON dosyasını içe aktar
 
-const menuItems = [
-  { path: "/konular/gezegenler-ve-uydular", label: "Gezegenler ve Uydular" },
-  { path: "/konular/yildizlar-ve-galaksiler", label: "Yıldızlar ve Galaksiler" },
-  { path: "/konular/gunes-ve-gunes-aktivitesi", label: "Güneş ve Güneş Aktivitesi" },
-  { path: "/konular/uzaydaki-yasam", label: "Uzaydaki Yaşam" },
-  {
-    path: "/konular/uzay-yolculugu-ve-gelecek-misyonlar",
-    label: "Uzay Yolculuğu ve Gelecek Misyonlar",
-  },
-  {
-    path: "/konular/uzay-olaylari-ve-doga-olaylari",
-    label: "Uzay Olayları ve Doğa Olayları",
-  },
-];
+const TopicsHome = () => {
+  const [menuItems, setMenuItems] = useState([]);
+  const [topics, setTopics] = useState([]);
+  const [introText, setIntroText] = useState("");
 
-export const TopicsHome = () => {
+  useEffect(() => {
+    // JSON'dan verileri al
+    setMenuItems(textData.menuItems);
+    setTopics(textData.topics);
+    setIntroText(textData.introText);
+  }, []);
+
   return (
-    <div className="flex">
+    <div className="flex bg-gray-100 min-h-screen">
       <Sidebar menuItems={menuItems} title="Ana Menü" />
-      <div className="ml-64 p-8">
+      <div className="p-20 mt-20">
+        {/* Üstten boşluk eklendi */}
+        <h1 className="text-4xl font-bold text-gray-800 mb-4">Uzay Konuları</h1>
+        <p className="text-lg text-gray-600 mb-8">{introText}</p>
+        <TopicsList topics={topics} /> {/* Yeni TopicsList bileşeni */}
       </div>
     </div>
   );
 };
+
+export default TopicsHome;
