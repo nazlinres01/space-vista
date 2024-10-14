@@ -118,7 +118,7 @@ function App() {
           />
         </Route>
       </Routes>
-      <Footer />
+      <Footer className="mt-auto" />
     </Router>
   );
 }

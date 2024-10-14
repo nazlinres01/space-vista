@@ -22,4 +22,14 @@ export const getMarsWeather = async () => {
   }
 };
 
+// API'den Dünya verilerini alma
+export const getEarthData = async () => {
+  try {
+      const response = await apiClient.get('/api/data/'); // Güncel endpoint
+      return response.data;
+  } catch (error) {
+      console.error('API çağrısında hata:', error);
+      throw error;  
+  }
+};
 // Diğer API isteklerini buraya ekleyin

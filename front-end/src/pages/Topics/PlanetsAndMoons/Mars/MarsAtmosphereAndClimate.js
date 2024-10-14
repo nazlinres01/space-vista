@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import Header from '../../../../components/Header/Header'; // Header componentini içe aktar
-import Footer from '../../../../components/Footer/Footer';
 import WeatherChart from '../../../../components/WeatherChart/WeatherChart';
 import DoughnutChart from '../../../../components/DoughnutChart/DoughnutChart';
 import { getMarsWeather } from '../../../../api/api'; // API'den veri çekmek için fonksiyon
@@ -82,7 +81,7 @@ const MarsAtmosphereAndClimate = () => {
           <DoughnutChart sol={selectedSol} data={data} />
         )}
       </div>
-      <Footer />
+
     </div>
   );
 };

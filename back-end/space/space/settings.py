@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Proje içindeki yolları şöyle oluşturun: BASE_DIR / 'alt_dizin'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,12 +21,16 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # GÜVENLİK UYARISI: Üretimde kullanılacak gizli anahtarı gizli tutun!
-SECRET_KEY = 'django-insecure-9&pfrh&w(-^t#b9()v66mol%^_l6q+&vwl6zw9%o(uf-#*xjk)'
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-9&pfrh&w(-^t#b9()v66mol%^_l6q+&vwl6zw9%o(uf-#*xjk')
 
 # GÜVENLİK UYARISI: Üretimde debug modunu açık bırakmayın!
-DEBUG = True
+DEBUG = os.environ.get('DJANGO_DEBUG', 'True') == 'True'
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'localhost', 
+    '127.0.0.1',
+    'your-domain.com',  # Projeyi dağıtacağınız alan adını buraya ekleyin
+]
 
 # Uygulama tanımları
 
@@ -37,6 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'corsheaders',  # CORS desteği için
+    'rest_framework',
+    'earth', 
 ]
 
 MIDDLEWARE = [
@@ -119,12 +126,12 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-NASA_API_KEY = 'gnYVD5JdV6ypXGNY7fqKVhEtlct0ms49tyhEmmsL'
+# NASA API Anahtarı
+NASA_API_KEY = os.environ.get('NASA_API_KEY', 'gnYVD5JdV6ypXGNY7fqKVhEtlct0ms49tyhEmmsL')
 
 # CORS ayarları
-
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",
+    "http://localhost:3000",  # Geliştirme ortamında izin verilen köken
     # Diğer izin verilen kökenleri buraya ekleyin
 ]
 
