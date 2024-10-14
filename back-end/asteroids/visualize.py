@@ -22,3 +22,5 @@ def get_near_earth_asteroids():
         plt.legend()
         plt.tight_layout()
         plt.show()
+    else:
+        print("Veri alınamadı.")
